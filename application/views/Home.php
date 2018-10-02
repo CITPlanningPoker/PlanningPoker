@@ -9,12 +9,12 @@
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="assets/images/Home.jpg">
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">Planning Poker</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div> 
+      <div class="topnav">
+          <a class="active" href="#home">Home</a>
+          <a href="#news">Planning Poker</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+      </div> 
 <!--
 	Experimental Buttons concept.
 	<div class="buttons-flex">
