@@ -1,38 +1,57 @@
 <!DOCTYPE html>
-<?php echo link_tag('assets/css/buttonStyle.css'); ?>
-<?php echo link_tag('assets/css/homepageStyle.css'); ?>
-<?php echo link_tag('assets/css/loginStyle.css'); ?>
+<?php 
+  echo link_tag('assets/css/gameStyle.css'); 
+?>
+
 <html>
 <head>
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="assets/images/Home.jpg">
-<!--
-	Experimental Buttons concept.
-	<div class="buttons-flex">
-  	<div><button class="btn blue">About</button></div><div><button class="btn blue">Login</button></div><div><button class="btn blue">Register</button></div><div><button class="btn blue">Contact Us</button></div>
-	</div>
--->
-<br>
-<br>
-<br>
-<br>
-<div class="login-page">
-  <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>
+
+  <div class="gameTable">
+    <img class="board" src="assets/images/pokerBoard.png" alt="board" />
+    <p>test</p>
+      <img id="cards" class="cardBack1" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
+       <img id="cards" src="assets/images/cards/back.png" alt="Playing card back" />
   </div>
-</div>
+  <!--<div class="cardList">
+    <table>
+      <tr>
+        <th>
+          <img id="cards" src="assets/images/cards/1.png" alt="Playing card 1" />
+        </th>
+        <th>
+          <img id="cards" src="assets/images/cards/2.png" alt="Playing card 1" />
+        </th>
+        <th>
+          <img id="cards" src="assets/images/cards/3.png" alt="Playing card 1" />
+        </th>
+        <th>
+          <img id="cards" src="assets/images/cards/5.png" alt="Playing card 1" />
+        </th>
+        <th>
+          <img id="cards" src="assets/images/cards/8.png" alt="Playing card 1" />
+        </th>
+        <th>
+          <img id="cards" src="assets/images/cards/13.png" alt="Playing card 1" />
+        </th>                              
+        <th>
+          <img id="cards" src="assets/images/cards/Inf.png" alt="Playing card 1" />
+        </th>   
+        <th>
+          <img id="cards" src="assets/images/cards/Question.png" alt="Playing card 1" />
+        </th>               
+      </tr>
+    </table>-->
+  </div>
 </body>
 </html>
