@@ -8,6 +8,7 @@
 <head>
 	<title>Planning Poker Home</title>
 </head>
+<!-- change -->
 <body class="bg" background="assets/images/Home.jpg">
         <div class="topnav">
             <a class="active" href="#home">Home</a>
