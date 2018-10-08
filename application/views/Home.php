@@ -8,6 +8,7 @@
 <head>
 	<title>Planning Poker Home</title>
 </head>
+<<<<<<< HEAD
 <!-- Some Change -->
 <body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
   <div class="topnav">
@@ -16,6 +17,16 @@
       <a href="index.php/Welcome/contactUS">Contact</a>
       <a href="index.php/Welcome/aboutIndex">About</a>
   </div> 
+=======
+<!-- change -->
+<body class="bg" background="assets/images/Home.jpg">
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">Planning Poker</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div> 
+>>>>>>> 33856b05e813a888b47a77ae34b33df4aa2acd8b
 <!--
 	Experimental Buttons concept.
 	<div class="buttons-flex">
