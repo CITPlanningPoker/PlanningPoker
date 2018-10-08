@@ -8,8 +8,10 @@
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="assets/images/Home.jpg">
-  <!-- -->
+
+<!--Buttons and storyboard-->
   <div class="leftSide">
+    <!--Buttons for Admin to control the game-->
     <div class="buttons">
       <ul>
         <li>Reveal Cards</li>
@@ -17,19 +19,20 @@
         <li>End Session</li>
       </ul>
     </div>
-    <!-- -->
+    <!-- Container for stories-->
     <div class="storyBox">
       <p>Information for the story will go here</p>
     </div>
   </div>
-  <!-- -->
 
-  <!-- -->
+
+<!--Gameboard-->
   <div class="rightSide">
     <div style="position: relative; left: 0; right: 0;">
         <img src="assets/images/pokerBoard.png" class="board" alt="board" />   
         <img src="assets/images/cards/back.png" class="cardBack" alt="cardBack" />
     </div>
+<!-- Card tray at bottom of screen-->
     <div class="cardContainer">
       <table>
         <tr>
@@ -55,7 +58,7 @@
             <img src="assets/images/cards/Inf.png" alt="Playing card Inf" />
           </th>   
           <th>
-            <img src="assets/images/cards/Question.png" alt="Playing card ?" />
+            <img src="assets/images/cards/Question.png" alt="Playing card " />
           </th>               
         </tr>
       </table>
