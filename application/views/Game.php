@@ -6,7 +6,7 @@
 <head>
 	<title>Planning Poker Home</title>
 </head>
-<body class="bg" background="assets/images/Home.jpg">
+<body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
 <!--
 	Experimental Buttons concept.
 	<div class="buttons-flex">
