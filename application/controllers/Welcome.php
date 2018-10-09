@@ -30,4 +30,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('Home');
 	}
+	public function aboutIndex()
+	{
+
+		$this->load->view('Game');
+
+	}
+		public function contactUS()
+	{
+
+		$this->load->view('Contact');
+
+	}
 }
