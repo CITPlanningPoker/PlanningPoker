@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <?php echo link_tag('assets/css/homepageStyle.css'); ?>
 <?php echo link_tag('assets/css/navBar.css'); ?>
 <?php echo link_tag('assets/css/contact_us_formStyle.css'); ?>
+=======
+<?php echo link_tag('assets/css/buttonStyle.css'); ?>
+<?php echo link_tag('assets/css/homepageStyle.css'); ?>
+<?php echo link_tag('assets/css/loginStyle.css'); ?>
+<?php echo link_tag('assets/css/navBar.css'); ?>
+>>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
 <html>
 <head>
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="<?php echo base_url();?>/assets/images/contact_us.png">
+<<<<<<< HEAD
 	  <div class="topnav">
       <a href="index">Home</a>
       <a href="">Planning Poker</a>
@@ -93,5 +101,7 @@ if(isset($_POST['submit']))
     </form>
 </div>
 </div>
+=======
+>>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
 </body>
 </html>
