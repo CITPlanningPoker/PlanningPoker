@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
     Created by Josh Tyra
     10/13/2018
@@ -6,16 +7,38 @@
 <?php echo link_tag('assets/css/homepageStyle.css'); ?>
 <?php echo link_tag('assets/css/navBar.css'); ?>
 <?php echo link_tag('assets/css/contact_us_formStyle.css'); ?>
+=======
+<!DOCTYPE html>
+<<<<<<< HEAD
+<?php echo link_tag('assets/css/homepageStyle.css'); ?>
+<?php echo link_tag('assets/css/navBar.css'); ?>
+<?php echo link_tag('assets/css/contact_us_formStyle.css'); ?>
+=======
+<?php echo link_tag('assets/css/buttonStyle.css'); ?>
+<?php echo link_tag('assets/css/homepageStyle.css'); ?>
+<?php echo link_tag('assets/css/loginStyle.css'); ?>
+<?php echo link_tag('assets/css/navBar.css'); ?>
+>>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
 <html>
 <head>
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="<?php echo base_url();?>/assets/images/contact_us.png">
+<<<<<<< HEAD
 	  <div class="topnav">
       <a href="<?php echo site_url();?>/User/index">Home</a>
       <a href="<?php echo site_url();?>/Welcome/planningPoker">Planning Poker</a>
       <a class="active" href="">Contact</a>
       <a href="">About</a>
+=======
+<<<<<<< HEAD
+	  <div class="topnav">
+      <a href="index">Home</a>
+      <a href="">Planning Poker</a>
+      <a class="active" href="">Contact</a>
+      <a href="<?php echo site_url();?>/Welcome/aboutIndex">About</a>
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
   </div>
   <?php
 $statusMsg = '';
@@ -97,5 +120,10 @@ if(isset($_POST['submit']))
     </form>
 </div>
 </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
 </body>
 </html>

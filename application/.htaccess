@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /CI220-CRUD/
@@ -5,3 +6,10 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
+=======
+RewriteEngine on
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a

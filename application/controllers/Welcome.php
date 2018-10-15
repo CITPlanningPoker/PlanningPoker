@@ -39,6 +39,11 @@ class Welcome extends CI_Controller {
 	public function aboutIndex()
 	{
 
+<<<<<<< HEAD
+=======
+		$this->load->view('Game');
+
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
 	}
 		public function contactUS()
 	{
@@ -46,6 +51,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('Contact');
 
 	}
+<<<<<<< HEAD
 	public function planningPoker()
 	{
 		$this->load->view('Game');
@@ -55,4 +61,6 @@ class Welcome extends CI_Controller {
 	{
 		
 	}
+=======
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
 }
