@@ -12,18 +12,26 @@ public function __construct()
 {
 
     parent::__construct();
+<<<<<<< HEAD
   	$this->load->helper(array('form', 'url'));
+=======
+  	$this->load->helper('url');
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
     $this->load->helper('html');
   	$this->load->model('User_model');
     $this->load->library('session');
     
 
 }
+<<<<<<< HEAD
 // Our Home Page Method
+=======
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
 public function index()
 {
 	$this->load->view('register.php');
 }
+<<<<<<< HEAD
 // Register our user to database
 public function register_user()
 {
@@ -39,6 +47,11 @@ if ($this->form_validation->run() == FALSE)
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.'); 
         redirect('User');
 }
+=======
+
+public function register_user()
+{
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
  
       $user=array(
       'userName'=>$this->input->post('userName'),
@@ -48,11 +61,19 @@ if ($this->form_validation->run() == FALSE)
         print_r($user);
  
 $email_check=$this->User_model->email_check($user['email']);
+<<<<<<< HEAD
 
 if($email_check)
 {
   $this->User_model->register_user($user);
   $this->session->set_flashdata('success_msg', 'Registered successfully. Now login to your account.');
+=======
+ 
+if($email_check)
+{
+  $this->User_model->register_user($user);
+  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
   redirect('/User/login_view');
  
 }
@@ -64,12 +85,19 @@ else
  
  
 }
+<<<<<<< HEAD
 
 
  
 }
 
 // Load our login view
+=======
+ 
+}
+
+
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
 public function login_view()
 {
  
@@ -77,7 +105,11 @@ public function login_view()
  
 }
 
+<<<<<<< HEAD
 // Log us in.
+=======
+
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
  public function login_user()
 {
   $user_login=array(
@@ -110,14 +142,22 @@ public function login_view()
  
  
 }
+<<<<<<< HEAD
 // Load our user profile "dashboard"
+=======
+
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
  public function user_profile()
 {
  
 	$this->load->view('user_profile.php',$data);
  
 }
+<<<<<<< HEAD
 // Log out
+=======
+
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
 public function user_logout()
 {
  

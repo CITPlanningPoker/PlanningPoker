@@ -18,7 +18,11 @@
           <a href="<?php echo site_url();?>/Welcome/contactUS">Contact</a>
           <a href="">About</a>
         </div>
+<<<<<<< HEAD
     <br><br><br><br><br><br><br><br>
+=======
+    <br><br><br><br><br><br><br><br><br><br>
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
     <div align="center" class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">

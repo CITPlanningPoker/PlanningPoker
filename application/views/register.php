@@ -30,8 +30,12 @@
                   <div class="panel-body">
                   <?php
                   $error_msg=$this->session->flashdata('error_msg');
+<<<<<<< HEAD
                   if($error_msg)
                   {
+=======
+                  if($error_msg){
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
                     echo $error_msg;
                   }
                    ?>
