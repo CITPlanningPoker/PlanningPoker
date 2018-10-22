@@ -35,7 +35,23 @@ $config['base_url'] = 'http://localhost/PlanningPoker/';
 | variable so that it is blank.
 |
 */
+<<<<<<< HEAD
 $config['index_page'] = 'index.php'; // was index.php
+=======
+<<<<<<< HEAD
+$config['index_page'] = 'index.php'; // was index.php
+=======
+<<<<<<< HEAD
+$config['index_page'] = 'index.php'; // was index.php
+=======
+<<<<<<< HEAD
+$config['index_page'] = 'index.php'; // was index.php
+=======
+$config['index_page'] = 'index.php';
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
 
 /*
 |--------------------------------------------------------------------------

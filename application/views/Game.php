@@ -7,6 +7,16 @@
 <head>
 	<title>Planning Poker Home</title>
 </head>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
 <body>
 
 <!--Buttons and storyboard-->
@@ -131,6 +141,43 @@
         </th>               
       </tr>
     </table>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
+<!--
+	Experimental Buttons concept.
+	<div class="buttons-flex">
+  	<div><button class="btn blue">About</button></div><div><button class="btn blue">Login</button></div><div><button class="btn blue">Register</button></div><div><button class="btn blue">Contact Us</button></div>
+	</div>
+-->
+<br>
+<br>
+<br>
+<br>
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
   </div>
 </body>
 </html>
