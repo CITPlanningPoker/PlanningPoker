@@ -8,18 +8,18 @@
 </head>
 <body>
 <script type="text/javascript">
-  //Card image variables
-    var cardBack = "assets/images/cards/Back.png";
-    var cardBlank = "assets/images/cards/Blank.png";
-    var card1 = "assets/images/cards/1.png";
-    var card2 = "assets/images/cards/2.png";
-    var card3 = "assets/images/cards/3.png";
-    var card5 = "assets/images/cards/5.png";
-    var card8 = "assets/images/cards/8.png";
-    var card13 = "assets/images/cards/13.png";
-    var cardInf = "assets/images/cards/Inf.png";
-    var cardQN = "assets/images/cards/Question.png";
-  //
+//Card image variables
+  var cardBack = "assets/images/cards/Back.png";
+  var cardBlank = "assets/images/cards/Blank.png";
+  var card1 = "assets/images/cards/1.png";
+  var card2 = "assets/images/cards/2.png";
+  var card3 = "assets/images/cards/3.png";
+  var card5 = "assets/images/cards/5.png";
+  var card8 = "assets/images/cards/8.png";
+  var card13 = "assets/images/cards/13.png";
+  var cardInf = "assets/images/cards/Inf.png";
+  var cardQN = "assets/images/cards/Question.png";
+  
   var showCards = true;
   var playerNum = 1;
   var currentPlayer = "player" + playerNum;
@@ -37,8 +37,8 @@
 
     //display the array to screen REMOVE LATER
     document.getElementById("arrayList").innerHTML = playerChoice;
-
   }
+
   function reveal() {
     for (var i = 0; i < playerChoice.length; i++){
       showCard = "player" + (i+1);
