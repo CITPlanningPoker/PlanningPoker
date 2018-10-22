@@ -39,6 +39,23 @@ class Welcome extends CI_Controller {
 	public function aboutIndex()
 	{
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+		$this->load->view('Game');
+
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
 	}
 		public function contactUS()
 	{
@@ -46,6 +63,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('Contact');
 
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
 	public function planningPoker()
 	{
 		$this->load->view('Game');
@@ -55,4 +85,18 @@ class Welcome extends CI_Controller {
 	{
 		
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
 }

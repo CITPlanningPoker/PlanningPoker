@@ -1,7 +1,43 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /CI220-CRUD/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?/$1 [L]
+<<<<<<< HEAD
 </IfModule>
+=======
+<<<<<<< HEAD
+</IfModule>
+=======
+<<<<<<< HEAD
+</IfModule>
+=======
+<<<<<<< HEAD
+</IfModule>
+=======
+</IfModule>
+=======
+RewriteEngine on
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+>>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876

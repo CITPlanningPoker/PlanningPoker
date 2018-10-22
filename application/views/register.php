@@ -30,15 +30,46 @@
                   <div class="panel-body">
                   <?php
                   $error_msg=$this->session->flashdata('error_msg');
+<<<<<<< HEAD
                   if($error_msg)
                   {
+=======
+<<<<<<< HEAD
+                  if($error_msg)
+                  {
+=======
+<<<<<<< HEAD
+                  if($error_msg)
+                  {
+=======
+<<<<<<< HEAD
+                  if($error_msg)
+                  {
+=======
+                  if($error_msg){
+>>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
                     echo $error_msg;
                   }
                    ?>
                       <form role="form" method="post" action="<?php echo site_url('/User/register_user'); ?>">
                           <fieldset>
                               <div class="form-group">
+<<<<<<< HEAD
                                   <input class="form-control" placeholder="User" name="userName" type="text" autofocus>
+=======
+<<<<<<< HEAD
+                                  <input class="form-control" placeholder="User" name="userName" type="text" autofocus>
+=======
+<<<<<<< HEAD
+                                  <input class="form-control" placeholder="User" name="userName" type="text" autofocus>
+=======
+                                  <input class="form-control" placeholder="Name" name="userName" type="text" autofocus>
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
                               </div>
                               <div class="form-group">
                                   <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
@@ -46,9 +77,24 @@
                               <div class="form-group">
                                   <input class="form-control" placeholder="Password" name="password" type="password" value="">
                               </div>
+<<<<<<< HEAD
                               <div class="form-group">
                                   <input class="form-control" placeholder="Confirm Password" name="passwordconfirmation" type="password" value="">
                               </div>
+=======
+<<<<<<< HEAD
+                              <div class="form-group">
+                                  <input class="form-control" placeholder="Confirm Password" name="passwordconfirmation" type="password" value="">
+                              </div>
+=======
+<<<<<<< HEAD
+                              <div class="form-group">
+                                  <input class="form-control" placeholder="Confirm Password" name="passwordconfirmation" type="password" value="">
+                              </div>
+=======
+>>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
+>>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
+>>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
                               <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register">
                           </fieldset>
                       </form>
