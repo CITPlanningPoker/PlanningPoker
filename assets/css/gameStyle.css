@@ -1,0 +1,122 @@
+html {
+    background-image: url("../images/home.jpg");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+body{ 
+    margin: 0 auto;
+    width: 1250px;
+}
+
+/* Left side UI */
+.leftSide {
+    float: left;
+    width: 450px;
+    height: 100%;
+}
+
+/* Sidebar buttons */
+.buttons {
+    background-color: green;
+    border: 2px solid black;
+    color: black;
+    width: 110px;
+    margin: 0 10px 0 28px;  
+    padding: 16px 2px 16px 2px;
+    border-radius: 8px;
+    float: left;
+    list-style-type: none;    
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    text-decoration: none;
+    background-color: white;
+}
+
+.buttons:active{
+    background-color: lightgreen;
+}
+
+/* Story board */
+.storyBox {
+    float: left;
+    background-color: white;
+    border: 10px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px;
+    min-width: 340px;
+    height: 350px;
+    overflow: auto;
+}
+
+/* Middle screen UI */
+.middle {
+    float: left;
+    width: 750px;
+    padding-top: 25px;
+}
+
+/* Main game board */
+.cardTable {
+    /* Table used for cards on the table*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: green;
+    border: 15px solid black;
+    border-radius: 15px;
+}
+
+.cardTable img {
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardTable p {
+    /* Table used for user names*/
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+.cardContainer {
+    /* Table used to hold user's cards*/
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.cardContainer img {
+    width: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin: 2px;
+}
+
+.cardContainer img:hover {
+    border: 2px solid gold;
+    margin: 0;
+    cursor: pointer;
+}
+
+.backCard {
+    width: 80%;
+}
+
+
+
+
