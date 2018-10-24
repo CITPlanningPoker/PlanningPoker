@@ -37,6 +37,7 @@ if(!$email)
     </div>
   </div>
 <a href="<?php echo site_url('/User/user_logout');?>" >  <button type="button" class="btn-primary">Logout</button></a>
+<a href="<?php echo site_url('/User/planningPoker');?>" >  <button type="button" class="btn-primary">Game</button></a>
 </div>
   </body>
 </html>

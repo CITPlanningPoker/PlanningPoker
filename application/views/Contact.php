@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
 <!--
     Created by Josh Tyra
     10/13/2018
@@ -22,83 +6,16 @@
 <?php echo link_tag('assets/css/homepageStyle.css'); ?>
 <?php echo link_tag('assets/css/navBar.css'); ?>
 <?php echo link_tag('assets/css/contact_us_formStyle.css'); ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<!DOCTYPE html>
-<<<<<<< HEAD
-<?php echo link_tag('assets/css/homepageStyle.css'); ?>
-<?php echo link_tag('assets/css/navBar.css'); ?>
-<?php echo link_tag('assets/css/contact_us_formStyle.css'); ?>
-=======
-<?php echo link_tag('assets/css/buttonStyle.css'); ?>
-<?php echo link_tag('assets/css/homepageStyle.css'); ?>
-<?php echo link_tag('assets/css/loginStyle.css'); ?>
-<?php echo link_tag('assets/css/navBar.css'); ?>
->>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
->>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
->>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
 <html>
 <head>
 	<title>Planning Poker Home</title>
 </head>
 <body class="bg" background="<?php echo base_url();?>/assets/images/contact_us.png">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
 	  <div class="topnav">
       <a href="<?php echo site_url();?>/User/index">Home</a>
-      <a href="<?php echo site_url();?>/Welcome/planningPoker">Planning Poker</a>
+      <a href="<?php echo site_url();?>/User/planningPoker">Planning Poker</a>
       <a class="active" href="">Contact</a>
       <a href="">About</a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-	  <div class="topnav">
-      <a href="index">Home</a>
-      <a href="">Planning Poker</a>
-      <a class="active" href="">Contact</a>
-      <a href="<?php echo site_url();?>/Welcome/aboutIndex">About</a>
->>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
->>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
   </div>
   <?php
 $statusMsg = '';
@@ -115,27 +32,8 @@ if(isset($_POST['submit']))
     if(!empty($email) && !empty($name) && !empty($subject) && !empty($message))
     {
         
-<<<<<<< HEAD
         if(filter_var($email, FILTER_VALIDATE_EMAIL) === false)
         {
-=======
-<<<<<<< HEAD
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false)
-        {
-=======
-<<<<<<< HEAD
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false)
-        {
-=======
-<<<<<<< HEAD
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false)
-        {
-=======
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
             $statusMsg = 'Please enter your valid email.';
             $msgClass = 'errordiv';
         }
@@ -200,25 +98,5 @@ if(isset($_POST['submit']))
     </form>
 </div>
 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c57ee953e999e0fa4ce462e8fc1105950c896c7a
->>>>>>> a76f7aa8028498f140e24debbfec5aaf5d96166a
->>>>>>> 9e5fae9b3cc288923111468f65a7fa6848130823
->>>>>>> cea6fd95e8e7b0d05e6424cf3022d475baf048bd
->>>>>>> 98ac56971342fa7d27480f5573b2525e5674e780
->>>>>>> 6f1df0aead34c41751e67dfdca80a61bcb479876
->>>>>>> 1de051c77295534e73a37d80059ba2a0e130395d
 </body>
 </html>
