@@ -1,33 +1,112 @@
 html {
-    background-image: url("../images/home.jpg");    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    background: #f2f6f8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f6f8 18%, #d8e1e7 59%, #d8e1e7 78%, #b5c6d0 100%, #e0eff9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f2f6f8 18%,#d8e1e7 59%,#d8e1e7 78%,#b5c6d0 100%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f2f6f8 18%,#d8e1e7 59%,#d8e1e7 78%,#b5c6d0 100%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0);
+
 }
 
-body{ 
+body { 
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.main {
     margin: 0 auto;
-    width: 1250px;
+    width: 80%;
 }
 
-/* Left side UI */
-.leftSide {
+/* Top and story text box*/
+.topScreen {
+    /* Centers to story text box */
+    margin-left: auto;
+    margin-right: auto;
+    /* Sets the suze of the text box*/
+    height: 160px;
+    width: 80%;
+    /* Adds space around the text box */
+
+    padding: 10px;
+    
+}
+
+.storyBox {
+    /* Text box style*/
+    background-color: #edefe7;
+    border: 1px solid #DDDDDD;
+    /* Adds space between text and box border*/
+    padding: 5px 15px 5px 15px;
+    /* Adds space between text box and surrounding area*/
+    margin: 55px 15px 0 15px;
+    min-height: 120px;
+    /* Adds scroll wheel if text exceeds boundaries*/
+    overflow: auto;
+}
+
+/* Buttons */
+/* Side bar menu for Admin controls */
+.sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 48px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+.closebtn:hover {
+    color: #333;
+}
+
+.openbtn {
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 12.5px 16px;
+    border: none;
+  position: fixed;    
+}
+
+.openbtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+#adminButton {
+    transition: margin-left .5s;
+    width: 200px;
     float: left;
-    width: 450px;
-    height: 100%;
+    position: absolute;
 }
 
-/* Sidebar buttons */
+.adminButtons {
+    margin-top: 20px;
+}
+
+/* Button style for admin controls */
 .buttons {
-    background-color: green;
+    background-color: blue;
     border: 2px solid black;
-    color: black;
+    color: white;
     width: 110px;
     margin: 0 10px 0 28px;  
     padding: 16px 2px 16px 2px;
     border-radius: 8px;
-    float: left;
+    float: right;
     list-style-type: none;    
     text-align: center;
     display: inline-block;
@@ -36,87 +115,111 @@ body{
     cursor: pointer;
 }
 
-.buttons:hover{
+.buttons:hover {
     text-decoration: none;
-    background-color: white;
+    background-color: lightblue;
 }
 
-.buttons:active{
+.buttons:active {
     background-color: lightgreen;
 }
 
-/* Story board */
-.storyBox {
-    float: left;
-    background-color: white;
-    border: 10px solid black;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 25px;
-    min-width: 340px;
-    height: 350px;
-    overflow: auto;
-}
-
-/* Middle screen UI */
-.middle {
-    float: left;
-    width: 750px;
-    padding-top: 25px;
-}
-
-/* Main game board */
-.cardTable {
-    /* Table used for cards on the table*/
-    margin-left: auto;
+/* Middle */
+/* Area for card placement */
+.middleScreen {
     margin-right: auto;
-    padding: 20px;
-    background-color: green;
-    border: 15px solid black;
-    border-radius: 15px;
-}
-
-.cardTable img {
-    border: 2px solid black;
-    display: block;
     margin-left: auto;
-    margin-right: auto;
+    width: 80%;
+    margin-top: 15px;    
 }
 
-.cardTable p {
-    /* Table used for user names*/
-    margin: 0 auto;
-    border: 2px solid black;
-    background-color: white;
+.middleScreen ul {
+    list-style-type: none;
+    float: left;
+    margin: 10px 0 0 0 ;
+}
+
+.middleScreen ul li {
+    /* Aligns the player names */
     text-align: center;
 }
 
+.middleScreen p.displayName {
+    /* Table used for user names*/
+    margin: 0 auto;
+    width: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.middleScreen p.displayCard:empty {
+    background: white;
+    border: 2px solid blue;
+    box-shadow: 0 0 0pt 0pt;
+}
+
+.middleScreen p.displayCard {
+    /* Create card dimensions*/
+    height: 190px;
+    width: 120px;
+    /* Centers numbers/symbols*/
+    line-height: 190px;
+    text-align: center;
+    /* Adds space between cards*/
+    margin: 5px 15px 10px 15px;
+    /* Text settings */
+    font-size: 35px;
+    color: white;
+    /* Border settings */
+    border: 2px solid white;
+    border-radius: 20px;
+    /* Card color settings */
+    box-shadow: 0 0 3pt 2pt blue;
+    background-color: blue;
+    background: rgb(55,14,190); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(55,14,190,1) 33%, rgba(58,14,232,1) 79%, rgba(75,40,248,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#370ebe', endColorstr='#4b28f8',GradientType=0 );   
+}
+
+/* Bottom */
+/* Cards for selection by user */
 .cardContainer {
-    /* Table used to hold user's cards*/
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid black;
-    border-radius: 15px;
-    background-color: black;
+    max-width: 700px;
+    height: 250px;
+    
+
+}
+.cardContainer p {
+    /* Create card dimensions*/
+    height: 190px;
+    width: 120px;
+    /* Centers numbers/symbols*/
+    line-height: 190px;
+    text-align: center;
+    /* Adds space between cards*/
+    margin: 5px 15px 10px 15px;
+    /* Text settings */
+    font-size: 35px;
+    color: white;
+    /* Border settings */
+    border: 2px solid white;
+    border-radius: 20px;
+    /* Card color settings */
+    box-shadow: 0 0 3pt 2pt blue;
+    background-color: blue;
+    background: rgb(55,14,190); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(55,14,190,1) 33%, rgba(58,14,232,1) 79%, rgba(75,40,248,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#370ebe', endColorstr='#4b28f8',GradientType=0 );  
 }
 
-.cardContainer img {
-    width: 100%;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    margin: 2px;
-}
-
-.cardContainer img:hover {
-    border: 2px solid gold;
-    margin: 0;
+.cardContainer p:hover {
+    box-shadow: 0 0 5pt 2pt yellow;
     cursor: pointer;
 }
-
-.backCard {
-    width: 80%;
-}
-
-
-
-
