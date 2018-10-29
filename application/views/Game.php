@@ -129,9 +129,6 @@
   </div>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <h2>Animated Modal with Header and Footer</h2>
-  <!-- Trigger/Open The Modal -->
-  <button id="myBtn">Open Modal</button>
   <!-- The Modal -->
   <div id="myModal" class="modal">
     <!-- Modal content -->
