@@ -1,127 +1,28 @@
+<!--  Created by Justin Bryant
+      Updated: 10/28/2018
+ -->
+
 <!DOCTYPE html>
 <?php 
   echo link_tag('assets/css/gameStyle.css'); 
   echo link_tag('assets/css/navBar.css');
+  echo link_tag('assets/css/popupStyle.css');
 ?>
 <html>
+
 <head>
-	<title>Planning Poker Home</title>
+	<title>Planning Poker Game</title>
 </head>
+
 <body>
-<script type="text/javascript">
-  var numberOfPlayers = 10;
-  var currentPlayer = 1;
-  var selectedPlayer = "player" + currentPlayer;
-  var playerArray = [];
-
-//Sets a card into the selected player's slot
-  function setCard(x){
-    if (playerArray.length < numberOfPlayers){
-        playerArray[currentPlayer - 1] = x;
-      document.getElementById(selectedPlayer).innerHTML = "✔";
-      //Reveals cards
-      if (playerArray.length == numberOfPlayers){
-        reveal();
-      }
-    }
-    //display the array to screen REMOVE LATER
-    document.getElementById("arrayList").innerHTML = playerArray;
-  }
-
-  function reveal() {
-    for (var i = 0; i < playerArray.length; i++){
-      showCard = "player" + (i+1);
-      if (playerArray[i] == 1){
-        document.getElementById(showCard).innerHTML = "1";
-      }
-      else if (playerArray[i] == 2){
-        document.getElementById(showCard).innerHTML = "2";
-      }
-      else if (playerArray[i] == 3){
-        document.getElementById(showCard).innerHTML = "3";
-      }
-      else if (playerArray[i] == 4){
-        document.getElementById(showCard).innerHTML = "5";
-      }
-      else if (playerArray[i] == 5){
-        document.getElementById(showCard).innerHTML = "8";
-      }
-      else if (playerArray[i] == 6){
-        document.getElementById(showCard).innerHTML = "13";
-      }
-      else if (playerArray[i] == 7){
-        document.getElementById(showCard).innerHTML = "∞";
-      }
-      else if (playerArray[i] == 8){
-        document.getElementById(showCard).innerHTML = "?";
-      }
-    }
-  }
-
-//TESTING FUNCTIONALITY, REMOVE LATER
-  function playerSelect(x){ // FOR TESTING, REMOVE LATER
-    //Used to cycle through players
-    if (x == 0) {
-      if (currentPlayer == 1){
-        currentPlayer = numberOfPlayers;
-        document.getElementById("playerTracker").innerHTML = "Current Player: " + currentPlayer;
-        selectedPlayer = "player" + currentPlayer;        
-      }
-      else {
-        currentPlayer--;
-        document.getElementById("playerTracker").innerHTML = "Current Player: " + currentPlayer;
-        selectedPlayer = "player" + currentPlayer;
-      }
-    }
-    else if (x == 1){
-      if (currentPlayer == numberOfPlayers){
-        currentPlayer = 1;
-        document.getElementById("playerTracker").innerHTML = "Current Player: " + currentPlayer;
-        selectedPlayer = "player" + currentPlayer;        
-      }
-      else {
-        currentPlayer++;
-        document.getElementById("playerTracker").innerHTML = "Current Player: " + currentPlayer;
-        selectedPlayer = "player" + currentPlayer;
-      }
-    }
-  }
-
-  function reset(){ // FOR TESTING, REMOVE LATER
-    //Resets cards to blank status
-    for (var i = 0; i < playerArray.length; i++){
-      var resetPlayer = "player" + (i+1);
-      document.getElementById(resetPlayer).innerHTML = "";
-    }
-
-    //Resets variables
-    selectedPlayer = "player1";
-    currentPlayer = 1;
-    playerArray = [];
-
-    //Displaying results to screen
-    document.getElementById("textBox").innerHTML = "Game Reset ";
-    document.getElementById("playerTracker").innerHTML = "Current Player: " + currentPlayer;
-    document.getElementById("arrayList").innerHTML = playerArray;
-  }
-  //Used to open and close admin buttons
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-
-  }
-
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-
-  }
-
-</script>
 <!-- Nav bar -->
   <div class="navbar">
-      <a class="active" href="">Home</a>
-      <a href="<?php echo site_url();?>/Welcome/planningPoker">Planning Poker</a>
-      <a href="<?php echo site_url();?>/Welcome/contactUS">Contact</a>
-      <a href="">About</a>
+      <a href="<?php echo site_url();?>/User/createSession">Planning Poker</a>
+      <!-- This could be added if multiple sessions are implemented
+        <a href="">Sessions></a>-->
+      <a href="<?php echo site_url();?>/User/contact">Contact Us</a>
+      <a href="<?php echo site_url();?>/User/about">About</a>
+      <a href="<?php echo site_url();?>/User/login">Login</a>
   </div> 
 
   <div id="adminButton">
@@ -133,83 +34,51 @@
     <div class="topScreen">
       <!-- Container for stories -->
       <div class="storyBox"><!-- Story text goes here -->
-        <p id="playerTracker">Current Player: 1</p>
-        <p id="textBox">textBox</p>
-        <p id="arrayList">arrayList</p>
-        <p id="rList"></p> 
+        <p id="listStory"></p>
       </div>
     </div>
 
   <!-- Gameboard -->
     <div class="middleScreen">
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player1"></p></li>
-          <li><p  class="displayName">Player 1</p></li>
-        </ul>
+        <li class="displayCard" id="player1"></li>
+        <li class="displayName">Player 1</li>
       </ul>
-
       <ul>
-         <ul>
-          <li><p  class="displayCard" id="player2"></p></li>
-          <li><p  class="displayName">Player 2</p></li>
-        </ul>
+        <li class="displayCard" id="player2"></li>
+        <li class="displayName">Player 2</li>
       </ul>
-
       <ul>
-       <ul>
-          <li><p  class="displayCard" id="player3"></p></li>
-          <li><p  class="displayName">Player 3</p></li>
-        </ul>
+        <li class="displayCard" id="player3"></li>
+        <li class="displayName">Player 3</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player4"></p></li>
-          <li><p  class="displayName">Player 4</p></li>
-        </ul>
+        <li class="displayCard" id="player4"></li>
+        <li class="displayName">Player 4</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player5"></p></li>
-          <li><p  class="displayName">Player 5</p></li>
-        </ul>
+        <li class="displayCard" id="player5"></li>
+        <li class="displayName">Player 5</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player6"></p></li>
-          <li><p  class="displayName">Player 6</p></li>
-        </ul>
+        <li class="displayCard" id="player6"></li>
+        <li class="displayName">Player 6</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player7"></p></li>
-          <li><p  class="displayName">Player 7</p></li>
-        </ul>
+        <li class="displayCard" id="player7"></li>
+        <li class="displayName">Player 7</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player8"></p></li>
-          <li><p  class="displayName">Player 8</p></li>
-        </ul>
+        <li class="displayCard" id="player8"></li>
+        <li class="displayName">Player 8</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player9"></p></li>
-          <li><p  class="displayName">Player 9</p></li>
-        </ul>
+        <li class="displayCard" id="player9"></li>
+        <li class="displayName">Player 9</li>
       </ul>
-
       <ul>
-        <ul>
-          <li><p  class="displayCard" id="player10"></p></li>
-          <li><p  class="displayName">Player 10</p></li>
-        </ul>
+        <li class="displayCard" id="player10"></li>
+        <li class="displayName">Player 10</li>
       </ul>      
     </div>
       
@@ -253,10 +122,41 @@
       <input type="button" class="buttons" value="reset" onclick="reset()">  
         
       <input type="button" class="buttons" value="Reveal Cards" onclick="reveal()">
-      <input type="button" class="buttons" value="Next Story">
+      <input type="button" class="buttons" value="Edit Story" onclick="editStory()">
       <input type="button" class="buttons" value="End Session">
       </div>
     </div>
   </div>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h2>Animated Modal with Header and Footer</h2>
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open Modal</button>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <textarea id="storyTextarea" name="story" placeholder="Write your story here..." required=""></textarea>
+        <input type="button" class="buttons" value="Submit Story" onclick="submitStory()">
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+
+<!-- Script for game play logic -->
+<script src="assets/js/gameLogic.js">
+</script>
+<!-- Script used for testing the game, REMOVE LATER -->
+<script src="assets/js/testingGameLogic.js">
+</script>
+<!-- Script for popup text box -->
+<script src="assets/js/popupScript.js">
+</script>
+
 </body>
 </html>

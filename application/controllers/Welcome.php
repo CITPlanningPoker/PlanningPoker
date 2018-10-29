@@ -22,12 +22,31 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->library('session');
 		$this->load->helper('url');
 		$this->load->helper('html');
-
 	}
+	
+	//Default location when accessing the website
+	//Change to login page when done testing
 	public function index()
 	{
-		$this->load->view('Game');
+		//$this->load->view('login');
+		$this->load->view('game');
+	}
+
+	public function planningPoker()
+	{
+		$this->load->view('createSession');	
+	}
+
+	public function contactUs()
+	{
+		$this->load->view('contact');
+	}
+
+	public function aboutPoker()
+	{
+		$this->load->view('about');
 	}
 }
