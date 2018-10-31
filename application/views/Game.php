@@ -39,7 +39,34 @@
     </div>
 
   <!-- Gameboard -->
+
     <div class="middleScreen">
+      <div id="cardDisplay"></div>
+      <!--
+        Current issues with cardDisplay
+          * Not changing players with next/prev player button
+          * After pressing reset button, can't set card in first slot
+      -->
+        <script type="text/javascript">
+          var players = ['John', 'Justin', 'Tim', 'David'];
+
+          players.forEach(function(player){
+              var playerNum = 1;
+              var ul = document.createElement('ul');
+              document.getElementById("cardDisplay").appendChild(ul);
+              var cardli = document.createElement('li');
+              var playerli = document.createElement('li');
+              cardli.setAttribute("class", "displayCard");
+              cardli.setAttribute("id", "player"+playerNum);
+              playerli.setAttribute("class", "displayName");
+              ul.appendChild(cardli);
+              ul.appendChild(playerli);
+              playerli.innerHTML += player;
+              cardli.innerHTML += "";
+              playerNum++;
+          });
+        </script>
+    <!-- Commenting out code to test new element
       <ul>
         <li class="displayCard" id="player1"></li>
         <li class="displayName">Player 1</li>
@@ -80,6 +107,7 @@
         <li class="displayCard" id="player10"></li>
         <li class="displayName">Player 10</li>
       </ul>      
+    End-->
     </div>
       
     <div class="bottomScreen">
@@ -139,6 +167,7 @@
       <div class="modal-body">
         <textarea id="storyTextarea" name="story" placeholder="Write your story here..." required=""></textarea>
         <input type="button" class="buttons" value="Submit Story" onclick="submitStory()">
+        <input type="button" class="buttons" value="Clear Story" onclick="clearStory()">
       </div>
       <div class="modal-footer">
       </div>
@@ -146,14 +175,10 @@
   </div>
 
 <!-- Script for game play logic -->
-<script src="assets/js/gameLogic.js">
-</script>
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/gameLogic.js"></script>
 <!-- Script used for testing the game, REMOVE LATER -->
-<script src="assets/js/testingGameLogic.js">
-</script>
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/testingGameLogic.js"></script>
 <!-- Script for popup text box -->
-<script src="assets/js/popupScript.js">
-</script>
-
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/popupScript.js"></script>
 </body>
 </html>

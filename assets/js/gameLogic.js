@@ -1,4 +1,4 @@
-  var numberOfPlayers = 10;
+  var numberOfPlayers = 4;
   var currentPlayer = 1;
   var selectedPlayer = "player" + currentPlayer;
   var playerArray = [];
@@ -46,6 +46,23 @@
       }
     }
   }
+    var players = ['John', 'Justin', 'Tim', 'David'];
+
+    players.forEach(function(player){
+        var playerNum = 1;
+        var ul = document.createElement('ul');
+        document.getElementById("cardDisplay").appendChild(ul);
+        var cardli = document.createElement('li');
+        var playerli = document.createElement('li');
+        cardli.setAttribute("class", "displayCard");
+        cardli.setAttribute("id", "player"+playerNum);
+        playerli.setAttribute("class", "displayName");
+        ul.appendChild(cardli);
+        ul.appendChild(playerli);
+        playerli.innerHTML += player;
+        cardli.innerHTML += "";
+        playerNum++;
+    });
   //Used to open and close admin buttons
   function openNav() {
     document.getElementById("mySidebar").style.width = "150px";

@@ -57,17 +57,20 @@
 
 .modal-header {
     padding: 30px 16px;
-    background-color: #5cb85c;
+    background-color: #dadbd4;
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 2px 16px;
+}
 
 .modal-footer {
     padding: 30px 16px;
-    background-color: #5cb85c;
+    background-color: #dadbd4;
     color: white;
 }
+
 textarea {
     display: block;
     margin-left: auto;

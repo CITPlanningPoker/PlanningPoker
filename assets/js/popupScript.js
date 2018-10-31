@@ -26,3 +26,6 @@ function submitStory() {
     document.getElementById("listStory").innerHTML = txt;
     modal.style.display = "none";
 }
+function clearStory() {
+    document.getElementById("listStory").innerHTML = "";
+}
