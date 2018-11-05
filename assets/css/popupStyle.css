@@ -71,6 +71,10 @@
     color: white;
 }
 
+.modal-footer .buttons {
+    color: black;
+}
+
 textarea {
     display: block;
     margin-left: auto;

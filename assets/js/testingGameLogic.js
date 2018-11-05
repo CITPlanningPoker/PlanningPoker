@@ -10,7 +10,7 @@
     //Resets variables
     selectedPlayer = "player1";
     currentPlayer = 1;
-    playerArray = [];
+    cardArray = [];
 
     //Displaying results to screen
     document.getElementById("textBox").innerHTML = "Game Reset ";
@@ -24,7 +24,7 @@
     //Used to cycle through players
     if (x == 0) {
       if (currentPlayer == 1){
-        currentPlayer = numberOfPlayers;
+        currentPlayer = playerArray.length;
         selectedPlayer = "player" + currentPlayer;        
       }
       else {
@@ -33,7 +33,7 @@
       }
     }
     else if (x == 1){
-      if (currentPlayer == numberOfPlayers){
+      if (currentPlayer == playerArray.length){
         currentPlayer = 1;
         selectedPlayer = "player" + currentPlayer;        
       }

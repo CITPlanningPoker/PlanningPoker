@@ -33,6 +33,7 @@ class Welcome extends CI_Controller {
 	{
 		//$this->load->view('login');
 		$this->load->view('game');
+		//$this->load->view('createSession');		
 	}
 
 	public function planningPoker()
@@ -50,4 +51,3 @@ class Welcome extends CI_Controller {
 		$this->load->view('about');
 	}
 }
-?>
