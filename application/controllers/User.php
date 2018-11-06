@@ -35,6 +35,7 @@ public function register_user()
 
       $this->form_validation->set_rules('userName', 'Username', 'required');
       $this->form_validation->set_rules('email', 'Email', 'required');
+      $this->form_validation->set_rules('emailconfirmation', 'Email', 'required|matches[email]');
       $this->form_validation->set_rules('password', 'Password', 'required');
       $this->form_validation->set_rules('passwordconfirmation', 'Password', 'required|matches[password]');
 
@@ -123,6 +124,20 @@ public function planningPoker()
  
 	$this->load->view('user_profile.php',$data);
  
+}
+//Call our About page from controller
+public function aboutPage()
+{
+
+  $this->load->view('About.php');
+
+}
+//Call our contactus page from controller
+public function contactUS()
+{
+
+  $this->load->view('Contact.php');
+
 }
 // Log out
 public function user_logout()

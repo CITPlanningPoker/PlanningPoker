@@ -15,8 +15,8 @@
         <div class="topnav">
           <a href="<?php echo site_url();?>/User/index">Home</a>
           <a href="<?php echo site_url();?>/User/planningPoker">Planning Poker</a>
-          <a href="<?php echo site_url();?>/Welcome/contactUS">Contact</a>
-          <a href="">About</a>
+          <a href="<?php echo site_url();?>/User/contactUS">Contact</a>
+          <a href="<?php echo site_url();?>/User/aboutPage">About</a>
         </div>
     <br><br><br><br><br><br><br><br>
     <div align="center" class="container">
