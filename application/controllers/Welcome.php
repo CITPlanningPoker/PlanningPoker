@@ -1,3 +1,8 @@
+<!--
+    Created by Josh Tyra
+    10/13/2018
+-->
+
  <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -22,6 +27,7 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->library('session');
 		$this->load->helper('url');
 		$this->load->helper('html');
 
@@ -29,5 +35,24 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('Home');
+	}
+	public function aboutIndex()
+	{
+
+	}
+		public function contactUS()
+	{
+
+		$this->load->view('Contact');
+
+	}
+	public function planningPoker()
+	{
+		$this->load->view('Game');
+
+	}
+	public function adduserName()
+	{
+		
 	}
 }
