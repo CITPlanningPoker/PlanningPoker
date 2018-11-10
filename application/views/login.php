@@ -5,11 +5,11 @@
 <!DOCTYPE html>
 <?php echo link_tag('assets/css/homepageStyle.css'); ?>
 <?php echo link_tag('assets/css/navBar.css'); ?>
+<?php echo link_tag('assets/css/bootstrap.css'); ?>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
   </head>
   <body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
         <div class="topnav">
