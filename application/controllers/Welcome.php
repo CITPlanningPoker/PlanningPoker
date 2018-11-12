@@ -30,27 +30,33 @@ class Welcome extends CI_Controller {
 		$this->load->library('session');
 		$this->load->helper('url');
 		$this->load->helper('html');
-
 	}
+	
 	public function index()
 	{
-		$this->load->view('Home');
+		$this->load->view('createSession');
 	}
+
 	public function aboutIndex()
 	{
 
 	}
-		public function contactUS()
+
+	public function contactUS()
 	{
-
 		$this->load->view('Contact');
-
 	}
+
 	public function planningPoker()
 	{
 		$this->load->view('Game');
-
 	}
+
+	public function createSession()
+	{
+		$this->load->view('createSession');
+	}
+
 	public function adduserName()
 	{
 		

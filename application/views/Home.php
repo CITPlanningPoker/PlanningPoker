@@ -15,6 +15,7 @@
 <body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
   <div class="topnav">
       <a class="active" href="">Home</a>
+      <a href="<?php echo site_url();?>/Welceom/createSession">Create Session</a>
       <a href="<?php echo site_url();?>/Welcome/planningPoker">Planning Poker</a>
       <a href="<?php echo site_url();?>/Welcome/contactUS">Contact</a>
       <a href="">About</a>

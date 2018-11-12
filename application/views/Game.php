@@ -8,11 +8,12 @@
   echo link_tag('assets/css/navBar2.css');
   echo link_tag('assets/css/popupStyle.css');
   echo link_tag('assets/css/adminStyle.css');
+  $this->load->library('Javascript');
+  $this->load->library('Javascript/Jquery');
 ?>
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 	<title>Planning Poker Game</title>
 </head>
 
@@ -22,39 +23,25 @@
   <div id="adminButton">
     <button class="openbtn" onclick="openNav()">☰ Admin Controls</button>  
   </div>
-  <div class="navbar" id="navBar">
-    <a href="<?php echo site_url();?>/User/createSession">Planning Poker</a>
-    <!-- This could be added if multiple sessions are implemented
-    <a href="">Sessions></a>-->
-    <a href="<?php echo site_url();?>/User/contact">Contact Us</a>
-    <a href="<?php echo site_url();?>/User/about">About</a>
-    <a href="<?php echo site_url();?>/User/login" class="login">Login</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div> 
-  <script>
-    function myFunction() {
-        var x = document.getElementById("navBar");
-        if (x.className === "navbar") {
-            x.className += " responsive";
-        } 
-        else {
-            x.className = "navbar";
-        }
-    }
-  </script> 
+    <div class="navbar">
+      <a href="<?php echo site_url();?>/User/index">Home</a>
+      <a class="active" href="">Planning Poker</a>
+      <a href="<?php echo site_url();?>/User/contactUS">Contact</a>
+      <a href="<?php echo site_url();?>/User/aboutPage">About</a>
+  </div>
 
   <div class="main">
     <!-- Storyboard -->
     <div class="section-story">
       <!-- Container for stories -->
       <div class="storyBox"><!-- Story text goes here -->
-        <p id="listStory"></p>
-        <p id="displayPlayerNum"></p>
+        <p>Hi, </p>
+        <p id="listStory"><?php echo $adminName; ?></p>
+        <!--<p><?php //echo $_POST["story"]; ?></p> -->
+
+        <p>
       </div>
     </div>
-
   <!-- Gameboard -->
 
     <div class="section-display">
@@ -78,46 +65,17 @@
           <li id="cards" onclick="setCard(8)">?</li>
         </ul>
       </div>
-        <!--
-          <tr>
-            <td>
-              <p id="cards" onclick="setCard(1)">1</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(2)">2</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(3)">3</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(4)">5</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(5)">8</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(6)">13</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(7)">∞</p>
-            </td>
-            <td>
-              <p id="cards" onclick="setCard(8)">?</p>
-            </td>
-          </tr>
-        -->
    </div>
-
       <!-- Buttons for testing card placement REMOVE LATER-->
       <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>    
-      <input type="button" class="buttons" value="prev player" onclick="playerSelect(0)">
-      <input type="button" class="buttons" value="next player" onclick="playerSelect(1)">
-      <input type="button" class="buttons" value="reset" onclick="reset()">  
-        
-      <input type="button" class="buttons" value="Reveal Cards" onclick="reveal()">
-      <input type="button" class="buttons" value="Edit Story" onclick="editStory()">
-      <input type="button" class="buttons" value="End Session">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>    
+        <input type="button" class="buttons" value="prev player" onclick="playerSelect(0)">
+        <input type="button" class="buttons" value="next player" onclick="playerSelect(1)">
+        <input type="button" class="buttons" value="reset" onclick="reset()">  
+          
+        <input type="button" class="buttons" value="Reveal Cards" onclick="reveal()">
+        <input type="button" class="buttons" value="Edit Story" onclick="editStory()">
+        <input type="button" class="buttons" value="End Session">
       </div>
    
   </div>
@@ -131,13 +89,14 @@
       <div class="modal-header">
         <span class="close">&times;</span>
       </div>
-      <div class="modal-body">
-        <textarea id="storyTextarea" name="story" placeholder="Write your story here..." required=""></textarea>
-      </div>
-      <div class="modal-footer">
-        <input type="button" class="buttons" value="Submit Story" onclick="submitStory()">
-        <input type="button" class="buttons" value="Clear Story" onclick="clearStory()">
-      </div>
+      <form role="form" method="post" action="">
+        <div class="modal-body">
+          <textarea id="storyTextarea" name="story" placeholder="Write your story here..." required=""></textarea>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" value="submit" value="send"></input>
+        </div>
+      </form>
     </div>
   </div>
 
