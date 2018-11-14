@@ -30,9 +30,7 @@
 					<label for="sessionHeader">Create a session</label>
 				</div>
 				<?php 
-					if ($viewID != null){
-						echo $viewID;
-					}
+					echo $query;
 				?>
 				<div class="body">
 					<input type="submit" name="createSession" value="Create Session">

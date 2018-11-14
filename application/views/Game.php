@@ -36,7 +36,12 @@
       <!-- Container for stories -->
       <div class="storyBox"><!-- Story text goes here -->
         <p>Hi, </p>
-        <p id="listStory"><?php echo $adminName; ?></p>
+        <p id="listStory">
+          <?php 
+            //echo print_r($adminName); 
+          //  echo $cardValue;
+          ?>
+        </p>
         <!--<p><?php //echo $_POST["story"]; ?></p> -->
 
         <p>
@@ -54,16 +59,34 @@
     <!-- New card code TESTING -->
     
       <div class="cardContainer">
-        <ul>
-          <li id="cards" onclick="setCard(1)">1</li>
-          <li id="cards" onclick="setCard(2)">2</li>
-          <li id="cards" onclick="setCard(3)">3</li>
-          <li id="cards" onclick="setCard(4)">5</li>
-          <li id="cards" onclick="setCard(5)">8</li>
-          <li id="cards" onclick="setCard(6)">13</li>
-          <li id="cards" onclick="setCard(7)">∞</li>
-          <li id="cards" onclick="setCard(8)">?</li>
+        <ul>          
+          <li class="cards" value="1">1</li>
+          <li class="cards" value="2">2</li>
+          <li class="cards" value="3">3</li>
+          <li class="cards" value="4">5</li>
+          <li class="cards" value="5">8</li>
+          <li class="cards" value="6">13</li>
+          <li class="cards" value="7">∞</li>
+          <li class="cards" value="8">?</li>
         </ul>
+        <!-- Submit card value -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $(".cards").click(function(){
+              var check = $(this).attr("value");
+              //alert(check);
+              $.ajax({
+                type: "POST",
+                url: "<?php echo site_url('/GameControl/setCard'); ?>",
+                data: check,
+                success: function(data){
+                  alert(check);
+                }
+              });
+            });
+          });
+        </script>
       </div>
    </div>
       <!-- Buttons for testing card placement REMOVE LATER-->

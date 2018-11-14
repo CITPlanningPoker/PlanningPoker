@@ -8,6 +8,7 @@ class GameControl extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('session');
+		$this->load->model('Game_model');
 		$this->load->helper(array('form', 'url'));
 		$this->load->helper('html');
 	}
@@ -21,7 +22,6 @@ class GameControl extends CI_Controller
 		$name = $_SESSION['userName'];		
 		
 		$userInfo = array(
-			'userID' => '1',
 			'userName' => $name,
 			'userVote' => '0',
 			'isAdmin' => '1'
@@ -39,37 +39,22 @@ class GameControl extends CI_Controller
 	**/
 	public function startPlayerGame()
 	{
-		$name = $_SESSION['userName'];		
-		//$checkID = $this->db->get('vote', 'userID');
-		$last_row=$this->db->select('userID')->order_by('userID', 'desc')->limit(1)->get('vote')->row();
-		$nextID['viewID'] = $last_row;
-		
-/*
-		$userInfo = array(
-			'userID' => $nextID,
-			'userName' => $name,
-			'userVote' => '0',
-			'isAdmin' => '0'
-		);
-*/
-		//$this->db->insert('vote', $userInfo);
 
-		$this->load->view('createSession', $nextID);
-		//Loads the game
-		//$this->load->view('GameTest');
 	}
 
 
 	public function setCard()
 	{
-		$name = $_SESSION['userName'];
 
-		$this->db->where('userName', $name);
-		
-		$cardValue['card'] = $this->input->post('card');
+		//$data['cardValue'] = $_POST['data'];
+		$data = "where";
+		$this->load->view('Game', $data);
 
-		$this->load->view('GameTest', $last_row);
-
+	/*
+		$data = "Where";
+		//$this->input->post('card_value');
+		$this->load->view('Game', $data);
+	*/
 		/**
 		* Select row by userID and/or userName
 		* Insert new card value
