@@ -2,7 +2,7 @@
   var currentPlayer = 1;
   var selectedPlayer = "player" + currentPlayer;
   var cardArray = [];
-  var playerArray = ['Justin', 'Alexis', 'David', 'Robert', 'Matt', 'Jennifer', 'Evan', 'Rylie'];  
+  var playerArray = ['Justin'];  
 
 //Sets a card into the selected player's slot
   function setCard(x){

@@ -35,16 +35,7 @@
     <div class="section-story">
       <!-- Container for stories -->
       <div class="storyBox"><!-- Story text goes here -->
-        <p>Hi, </p>
-        <p id="listStory">
-          <?php 
-            //echo print_r($adminName); 
-          //  echo $cardValue;
-          ?>
-        </p>
-        <!--<p><?php //echo $_POST["story"]; ?></p> -->
-
-        <p>
+        <p id="listStory"></p>
       </div>
     </div>
   <!-- Gameboard -->
@@ -69,25 +60,25 @@
           <li class="cards" value="7">∞</li>
           <li class="cards" value="8">?</li>
         </ul>
-        <!-- Submit card value -->
+        <!-- Submit card value to the controller-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
           $(document).ready(function(){
             $(".cards").click(function(){
-              var check = $(this).attr("value");
-              //alert(check);
+              var cardValue = $(this).attr("value");
               $.ajax({
                 type: "POST",
                 url: "<?php echo site_url('/GameControl/setCard'); ?>",
-                data: check,
+                data: 'cardValue='+cardValue,
                 success: function(data){
-                  alert(check);
+                  $('#listStory').html(data);
                 }
               });
             });
           });
         </script>
       </div>
+      
    </div>
       <!-- Buttons for testing card placement REMOVE LATER-->
       <div id="mySidebar" class="sidebar">
