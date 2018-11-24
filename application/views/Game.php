@@ -14,6 +14,9 @@ if(!$_SESSION['email'])
   echo link_tag('assets/css/navBar2.css');
   echo link_tag('assets/css/popupStyle.css');
   echo link_tag('assets/css/adminStyle.css');
+
+  //var_dump($this->session->userdata('gamePlayers'));
+  //die();
 ?>
 <html>
 <head>
@@ -28,12 +31,12 @@ if(!$_SESSION['email'])
     <button class="openbtn" onclick="openNav()">☰ Admin Controls</button>  
   </div>
   <div class="navbar" id="navBar">
-    <a href="<?php echo site_url();?>/User/createSession">Planning Poker</a>
+    <a href="">Planning Poker</a>
     <!-- This could be added if multiple sessions are implemented
     <a href="">Sessions></a>-->
-    <a href="<?php echo site_url();?>/User/contact">Contact Us</a>
-    <a href="<?php echo site_url();?>/User/about">About</a>
-    <a href="<?php echo site_url();?>/User/login" class="login">Login</a>
+    <a href="<?php echo site_url();?>/User/contactUS">Contact Us</a>
+    <a href="<?php echo site_url();?>/User/aboutPage">About</a>
+    <a href="<?php echo site_url();?>/User/user_logout" class="login">LogOut</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -75,8 +78,8 @@ if(!$_SESSION['email'])
         <ul>
           <li id="cards" onclick="setCard(1)">1</li>
           <li id="cards" onclick="setCard(2)">2</li>
-          <li id="cards" onclick="setCard(3)">3</li>
-          <li id="cards" onclick="setCard(4)">5</li>
+          <li type="button">3</li>
+          <li id="cards" onclick="chkbox()">5</li>
           <li id="cards" onclick="setCard(5)">8</li>
           <li id="cards" onclick="setCard(6)">13</li>
           <li id="cards" onclick="setCard(7)">∞</li>
@@ -147,10 +150,91 @@ if(!$_SESSION['email'])
   </div>
 
 <!-- Script for game play logic -->
-<script type="text/javascript" src="<?php echo base_url();?>/assets/js/gameLogic.js"></script>
+<script type="text/javascript">
+  
+
+  var users = <?php echo json_encode(array_values($_SESSION)); ?>;
+  var currentPlayer = 1;
+  var selectedPlayer = "player" + currentPlayer;
+  var cardArray = [];
+  var playerArray = [users[0],users[1]];  
+
+//Sets a card into the selected player's slot
+  function setCard(x)
+  {
+    if (cardArray.length < playerArray.length)
+    {
+        cardArray[currentPlayer - 1] = x;
+      document.getElementById(selectedPlayer).innerHTML = "✔";
+      //Reveals cards
+      if (cardArray.length == playerArray.length)
+      {
+        reveal();
+      }
+    }
+    //display the array to screen REMOVE LATER
+    document.getElementById("arrayList").innerHTML = cardArray;
+
+  
+  }
+
+  function reveal() {
+    for (var i = 0; i < cardArray.length; i++){
+      showCard = "player" + (i+1);
+      if (cardArray[i] == 1){
+        document.getElementById(showCard).innerHTML = "1";
+      }
+      else if (cardArray[i] == 2){
+        document.getElementById(showCard).innerHTML = "2";
+      }
+      else if (cardArray[i] == 3){
+        document.getElementById(showCard).innerHTML = "3";
+      }
+      else if (cardArray[i] == 4){
+        document.getElementById(showCard).innerHTML = "5";
+      }
+      else if (cardArray[i] == 5){
+        document.getElementById(showCard).innerHTML = "8";
+      }
+      else if (cardArray[i] == 6){
+        document.getElementById(showCard).innerHTML = "13";
+      }
+      else if (cardArray[i] == 7){
+        document.getElementById(showCard).innerHTML = "∞";
+      }
+      else if (cardArray[i] == 8){
+        document.getElementById(showCard).innerHTML = "?";
+      }
+    }
+  }
+
+  var playerNum = 1;
+  playerArray.forEach(function(player){
+    var ul = document.createElement('ul');
+    document.getElementById("cardDisplay").appendChild(ul);
+    var cardli = document.createElement('li');
+    var playerli = document.createElement('li');
+    cardli.setAttribute("class", "displayCard");
+    cardli.setAttribute("id", "player"+playerNum);
+    playerli.setAttribute("class", "displayName");
+    ul.appendChild(cardli);
+    ul.appendChild(playerli);
+    playerli.innerHTML += player;
+    cardli.innerHTML += "";
+    playerNum++;
+  });
+
+  //Used to open and close admin buttons
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "180px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
+</script>
 <!-- Script used for testing the game, REMOVE LATER -->
 <script type="text/javascript" src="<?php echo base_url();?>/assets/js/testingGameLogic.js"></script>
-<!-- Script for popup text box -->
-<script type="text/javascript" src="<?php echo base_url();?>/assets/js/popupScript.js"></script>
 </body>
 </html>

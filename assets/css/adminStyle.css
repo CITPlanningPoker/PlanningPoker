@@ -1,0 +1,86 @@
+/* Side bar menu for Admin controls */
+.sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 48px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+.closebtn:hover {
+    background: #DDD;
+    color: black;
+}
+
+.openbtn {
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 12.5px 16px;
+    border: none;
+    position: fixed;  
+    top: 49px;  
+}
+
+.openbtn:hover {
+    background: #DDD;
+    color: black;
+}
+
+#adminButton {
+    transition: margin-left .5s;
+    width: 100px;
+    float: left;
+    position: absolute;
+}
+
+.adminButtons {
+    margin-top: 20px;
+}
+
+/* Button style for admin controls */
+.sidebar .buttons {      
+    /* Button dimension */
+    width: 110px;
+    margin: 0 10px 0 28px;  
+    padding: 16px 2px 16px 2px;
+    border-radius: 8px;
+    float: right;
+    list-style-type: none;    
+    text-align: center;
+    display: inline-block;
+    /* Font style */
+    font-size: 15px;
+    font-weight: bold;
+    /* Cursor style*/
+    cursor: pointer;
+    /* Color for the buttons */
+    border: 2px solid black;
+    color: white;    
+    background: rgb(55,14,190); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(55,14,190,1) 33%, rgba(58,14,232,1) 79%, rgba(75,40,248,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(55,14,190,1) 33%,rgba(58,14,232,1) 79%,rgba(75,40,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#370ebe', endColorstr='#4b28f8',GradientType=0 );     
+}
+
+.buttons:hover {
+    text-decoration: none;
+    background-color: lightblue;
+    box-shadow: 0 0 2pt 2pt lightblue;
+}

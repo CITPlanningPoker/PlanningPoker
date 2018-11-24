@@ -6,12 +6,13 @@
 <?php echo link_tag('assets/css/homepageStyle.css'); ?>
 <?php echo link_tag('assets/css/navBar.css'); ?>
 <?php echo link_tag('assets/css/bootstrap.css'); ?>
+<script type="text/javascript" src="<?php echo base_url();?>/assets/js/detectMobile.js"></script>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Registration</title>
   </head>
-  <body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
+  <body onload="mobileAndTabletcheck()" class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
       <div class="topnav">
         <a class="active" href="">Home</a>
         <a href="<?php echo site_url();?>/User/planningPoker">Planning Poker</a>
