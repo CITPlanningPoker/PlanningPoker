@@ -153,6 +153,8 @@ public function addPlayers()
       {
         //echo "<pre>"; print_r($this->input->post()); exit();
         $game['ids'] = $this->input->post();
+    //    var_dump($game['ids']);
+     //   die();
 
 
  //       if ($game['ids']== session_id()) 
@@ -161,15 +163,20 @@ public function addPlayers()
   //        $game['ids'] = NULL;
 
   //      }
+   //     var_dump($game['ids']);
+    //    die();
 
-        foreach ($game['ids'] as $value) 
+
+        foreach ($game['ids'] as $ids )
         {
 
-          $game['players'] = $this->User_model->displaygameUsers($value);
+          $game['players'] = $this->User_model->displaygameUsers($ids);
+
+          $this->session->set_userdata('gamePlayers',$game['players']);
           
         }
 
-        //$this->session->set_userdata('gamePlayers',$game['players']);
+
       }
 
 
@@ -183,24 +190,6 @@ public function addPlayers()
     $this->load->view('Game');
 
       
-}
-//Set our card value
-public function setCard3()
-{
-
-  $this->User_model->setcardValue(session_id(),'3');
-  redirect('/User/planningPoker');
-
-
-}
-//Set our card value
-public function setCard5()
-{
-
-  $this->User_model->setcardValue(session_id(),'5');
-  redirect('/User/planningPoker');
-
-
 }
 // Log out
 public function user_logout()

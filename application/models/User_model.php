@@ -75,24 +75,22 @@ public function displayUsers()
 }
 public function displaygameUsers($id)
 {
-  
-  $this->load->helper('array');
-  $this->db->select('User');
-  $this->db->from('ci_sessions');
-  $this->db->where_in('id',$id);
+      $this->db->select('User');
+      $this->db->from('ci_sessions');
+      $this->db->where_in('id',$id);
 
-  $query = $this->db->get()->result();
+      $query = $this->db->get();
 
-  //var_dump($query);
-  //die();
+   foreach ($query->result() as $row)
+   {
 
- //  foreach ($query as $row)
- //  {
+       $users[] = $row->User;
 
-  //    return $row;
-  // }
+   }
 
-  return $query;
+   return $users;
+
+
 
 }
 // Used to display all session Ids of active users.
