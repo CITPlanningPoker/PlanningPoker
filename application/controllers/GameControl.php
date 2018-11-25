@@ -42,13 +42,16 @@ class GameControl extends CI_Controller
 
 	}
 
+	public function loadUsers() 
+	{
+
+		
+	}
 
 	public function setCard()
 	{
-		if (isset($_POST['cardValue']))
-		{
-			echo $cardValue = $_POST['cardValue'];
-		}
+		echo $cardValue = $this->input->post('cardValue');
+
 		/**
 		* Select row by userID and/or userName
 		* Insert new card value

@@ -8,8 +8,6 @@
   echo link_tag('assets/css/navBar2.css');
   echo link_tag('assets/css/popupStyle.css');
   echo link_tag('assets/css/adminStyle.css');
-  $this->load->library('Javascript');
-  $this->load->library('Javascript/Jquery');
 ?>
 <html>
 
@@ -63,6 +61,13 @@
         <!-- Submit card value to the controller-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
+          <?php
+            $userName = array("Justin", "Evan");
+            $userCard = array(0, 1);
+          ?>
+          var playerArray = <?php echo json_encode($userName) ?>;
+          var cardArray = <?php echo json_encode($userCard) ?>;
+
           $(document).ready(function(){
             $(".cards").click(function(){
               var cardValue = $(this).attr("value");

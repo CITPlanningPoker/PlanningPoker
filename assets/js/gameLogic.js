@@ -1,23 +1,30 @@
 
-  var currentPlayer = 1;
-  var selectedPlayer = "player" + currentPlayer;
-  var cardArray = [];
-  var playerArray = ['Justin'];  
-
-//Sets a card into the selected player's slot
-  function setCard(x){
-    if (cardArray.length < playerArray.length){
-        cardArray[currentPlayer - 1] = x;
-      document.getElementById(selectedPlayer).innerHTML = "✔";
-      //Reveals cards
-      if (cardArray.length == playerArray.length){
-        reveal();
-      }
-    }
-    //display the array to screen REMOVE LATER
-    document.getElementById("arrayList").innerHTML = cardArray;
+  var playerArray;
+  var cardArray;
+//Used to check card value with .every() 
+  function checkValues(cv){
+    return cv > 0;
   }
 
+//Automatically called to update the view to show vote status
+  function checkCards() {
+    if (cardArray.every(checkValues)) {
+      reveal();
+    }
+    else {
+      for (var i = 0; i < cardArray.length; i++){
+        showCard = "player" + (i+1);
+        if (cardArray[i] == 0){
+          document.getElementById(showCard).innerHTML = "";
+        }
+        else {
+          document.getElementById(showCard).innerHTML = "✔";
+        }
+      }
+    }
+  }
+
+//Displays the results of all votes
   function reveal() {
     for (var i = 0; i < cardArray.length; i++){
       showCard = "player" + (i+1);
@@ -48,6 +55,7 @@
     }
   }
 
+//Builds the card display in the Game view
   var playerNum = 1;
   playerArray.forEach(function(player){
     var ul = document.createElement('ul');
@@ -64,7 +72,7 @@
     playerNum++;
   });
 
-  //Used to open and close admin buttons
+//Used to open and close admin buttons
   function openNav() {
     document.getElementById("mySidebar").style.width = "180px";
   }
@@ -72,3 +80,6 @@
   function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
   }
+
+//Calling the function
+checkCards();

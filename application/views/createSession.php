@@ -10,7 +10,7 @@
 	<title>Planning Poker Create or Join Session</title>
 </head>
 
-<body>
+<body onload="<?php echo site_url('/GameControl/loadUsers'); ?>">
 <!-- Nav bar -->
 	<div class="navBackground"></div>
   <div class="navbar">
