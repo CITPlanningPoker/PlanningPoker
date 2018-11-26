@@ -1,11 +1,17 @@
 <!--  Created by Justin Bryant
       Updated: 10/28/2018
  -->
-
+<?php
+if(!$_SESSION['email'])
+{
+  $this->session->set_flashdata('error_msg','You must be logged in to view this page!');
+  redirect('/User/login_view');
+}
+?>
 <!DOCTYPE html>
 <?php 
   echo link_tag('assets/css/gameStyle.css'); 
-  echo link_tag('assets/css/navBar2.css');
+  echo link_tag('assets/css/navBar.css');
   echo link_tag('assets/css/popupStyle.css');
   echo link_tag('assets/css/adminStyle.css');
 ?>
@@ -15,13 +21,13 @@
 	<title>Planning Poker Game</title>
 </head>
 
-<body>
+<body class="bg" background="<?php echo base_url();?>/assets/images/Home.jpg">
 <!-- Nav bar -->  
   <div class="navBackground"></div>
   <div id="adminButton">
     <button class="openbtn" onclick="openNav()">☰ Admin Controls</button>  
   </div>
-    <div class="navbar">
+    <div class="topnav">
       <a href="<?php echo site_url();?>/User/index">Home</a>
       <a class="active" href="">Planning Poker</a>
       <a href="<?php echo site_url();?>/User/contactUS">Contact</a>
@@ -88,10 +94,7 @@
       <!-- Buttons for testing card placement REMOVE LATER-->
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>    
-        <input type="button" class="buttons" value="prev player" onclick="playerSelect(0)">
-        <input type="button" class="buttons" value="next player" onclick="playerSelect(1)">
-        <input type="button" class="buttons" value="reset" onclick="reset()">  
-          
+        <input type="button" class="buttons" value="reset" onclick="reset()">            
         <input type="button" class="buttons" value="Reveal Cards" onclick="reveal()">
         <input type="button" class="buttons" value="Edit Story" onclick="editStory()">
         <input type="button" class="buttons" value="End Session">

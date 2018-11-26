@@ -1,21 +1,27 @@
 html {
-    background: #f2f6f8; /* Old browsers */
-    background: -moz-linear-gradient(top, #f2f6f8 18%, #d8e1e7 59%, #d8e1e7 78%, #b5c6d0 100%, #e0eff9 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #f2f6f8 18%,#d8e1e7 59%,#d8e1e7 78%,#b5c6d0 100%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #f2f6f8 18%,#d8e1e7 59%,#d8e1e7 78%,#b5c6d0 100%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0);
     height: 100%;
 }
+.bg {
 
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 body { 
     margin: 0;
     padding-bottom: 10px;
+    background-color: white;
+    height: 100%;
 }
 
 .main {
     margin: 0 auto;
     width: 80%;
-    margin-top: 55px;
+    margin-top: 65px;
 }
 
 /* Top and story text box*/
@@ -56,10 +62,9 @@ body {
 
 .cardContainer {
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
     height: 250px;
     margin-top: 15px;
+    text-align: center;
 }
 
 .section-display ul,
@@ -137,7 +142,7 @@ body {
 }*/
 
 /* Adjust UI based on screen width */
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 99999px){
     .section-story {
         margin-left: auto;
         margin-right: auto;

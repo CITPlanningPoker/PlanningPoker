@@ -3,7 +3,7 @@
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 48px;
+    bottom: 0px;
     left: 0;
     background-color: #333;
     overflow-x: hidden;
@@ -34,7 +34,7 @@
     padding: 12.5px 16px;
     border: none;
     position: fixed;  
-    top: 49px;  
+    bottom: 0px;  
 }
 
 .openbtn:hover {

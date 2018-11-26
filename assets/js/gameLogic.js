@@ -1,6 +1,7 @@
 
   var playerArray;
   var cardArray;
+  
 //Used to check card value with .every() 
   function checkValues(cv){
     return cv > 0;
